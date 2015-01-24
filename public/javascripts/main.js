@@ -89,7 +89,7 @@ App.keyListener = function() {
 
 App.swapKeyLayoutListener = function() {
   var changed = false;
-  $('button.js-swap-layout').click(function() {
+  $('.js-swap-layout').click(function() {
     if (!changed) {
       $('.grid-row').first().children('.grid').each(function(index) {
         $(this).find('h1').text(index + 7);
