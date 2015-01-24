@@ -91,6 +91,9 @@ a {
     .grid h1 {
       line-height: 20px;
     }
+    .grid p {
+      font-size: 8px;
+    }
 
   .pi-container {
     height: 200px;
