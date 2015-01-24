@@ -73,10 +73,14 @@ a {
 }
 
 @media screen and (max-width: 520px) {
+  body {
+    padding: 0;
+  }
   .grid-container {
     position: relative;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 18%;
+    margin-right: 18%;
+    float: none;
   }
 
   .grid-row {
@@ -95,7 +99,53 @@ a {
       font-size: 8px;
     }
 
+  .indicator-container {
+    width: 75%;
+    float: none;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
   .pi-container {
     height: 200px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  body {
+    padding: 0px;
+  }
+  .grid-container {
+    position: relative;
+    margin-left: 25%;
+    margin-right: 25%;
+    float: none;
+  }
+
+  .grid-row {
+    margin-bottom: 5px;
+    height: 62.5px;
+  }
+
+  .grid {
+    padding-left: 0;
+    padding-right: 0;
+    height: 40.5px;
+    width: 40.5px;
+  }
+    .grid h1 {
+      line-height: 15px;
+      font-size: 15px;
+    }
+    .grid p {
+      font-size: 9px;
+    }
+
+  .indicator-container {
+    width: 88%;
+    float: none;
+  }
+
+  .pi-container {
+    height: 150px;
   }
 }
