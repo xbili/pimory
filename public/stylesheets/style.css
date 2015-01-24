@@ -31,6 +31,12 @@ a {
     line-height: 70px;
   }
 
+  .grid p {
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 45%;
+  }
+
   .grid:hover {
     cursor: pointer;
     background-color: rgba(250, 228, 230, 0.35);
