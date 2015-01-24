@@ -7,6 +7,11 @@ a {
   color: #00B7FF;
 }
 
+.grid-container {
+  position: relative;
+  float: right;
+}
+
 .grid-row {
   margin-bottom: 15px; 
   height: 105.25px;
@@ -34,4 +39,34 @@ a {
 .pi-container {
   overflow: scroll;
   height: 360.75px;
+}
+
+.pi-score-container {
+  position: relative;
+  float: left;
+}
+
+@media screen and (max-width: 520px) {
+  .grid-container {
+    position: relative;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .grid-row {
+    margin-bottom: 5px;
+    height: 62.5px;
+  }
+
+  .grid {
+    height: 57.5px;
+    width: 57.5px;
+  }
+    .grid h1 {
+      line-height: 20px;
+    }
+
+  .pi-container {
+    height: 200px;
+  }
 }

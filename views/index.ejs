@@ -4,15 +4,14 @@
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
     <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
   <div class="container">
 
-  <div class="row">
-
   <!-- PI & Score indicator -->
-  <div class="col-xs-6">
-  <div class="container">
+  <div class="pi-score-container">
     <h1>Score:</h1>
     <h3 class="js-score-indicator">0</h3>
     <div class="pi-container">
@@ -20,11 +19,10 @@
       <h3 class="js-pi-indicator"></h3>
     </div>
   </div>
-  </div>
   <!-- *end* -->
 
   <!-- Grid for PI keyboard -->
-  <div class="grid-container col-xs-6">
+  <div class="grid-container">
     <div class="grid-row row">
       <div class="grid col-xs-3"><h1>1</h1></div>
       <div class="grid col-xs-3"><h1>2</h1></div>
@@ -47,8 +45,6 @@
     </div>
   </div>
   <!-- *end* -->
-
-  </div>
 
   </div>
   <script type="text/javascript" src="javascripts/jquery-1.11.0.min.js"></script>
