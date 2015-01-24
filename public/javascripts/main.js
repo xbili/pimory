@@ -56,6 +56,7 @@ App.updateScore = function() {
 };
 
 App.updateScoreIndicator = function() {
+  App.updateScore();
   $('.js-score-indicator').text(this.score);
 };
 
@@ -67,7 +68,6 @@ App.keyListener = function() {
 
     if (App.verifyPi(value)) {
       App.updatePiIndicator();
-      App.updateScore();
       App.updateScoreIndicator();
     }
   });
