@@ -7,10 +7,6 @@ a {
   color: #00B7FF;
 }
 
-.grid-container {
-
-}
-
 .grid-row {
   margin-bottom: 15px; 
   height: 105.25px;
@@ -34,3 +30,8 @@ a {
     cursor: pointer;
     background-color: rgba(250, 228, 230, 0.35);
   }
+
+.pi-container {
+  overflow: scroll;
+  height: 360.75px;
+}
