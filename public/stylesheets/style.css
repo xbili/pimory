@@ -44,11 +44,7 @@ a {
 .pi-score-container {
   position: relative;
   float: left;
-}
-
-.swap-layout {
-  margin-left: 15%;
-  margin-right: 15%;
+  width: 40%;
 }
 
 @media screen and (max-width: 520px) {
