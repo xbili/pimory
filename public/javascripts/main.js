@@ -87,9 +87,33 @@ App.keyListener = function() {
   });
 };
 
+App.swapKeyLayoutListener = function() {
+  var changed = false;
+  $('button.js-swap-layout').click(function() {
+    if (!changed) {
+      $('.grid-row').first().children('.grid').each(function(index) {
+        $(this).find('h1').text(index + 7);
+      });
+      $('.grid-row:nth-last-child(2)').children('.grid').each(function(index) {
+        $(this).find('h1').text(index + 1);
+      });
+      changed = true;
+    } else {
+      $('.grid-row').first().children('.grid').each(function(index) {
+        $(this).find('h1').text(index + 1);
+      });
+      $('.grid-row:nth-last-child(2)').children('.grid').each(function(index) {
+        $(this).find('h1').text(index + 7);
+      });
+      changed = false;
+    }
+  });
+};
+
 App.main = function() {
   this.getPi();
   this.keyListener();
+  this.swapKeyLayoutListener();
 };
 
 $(document).ready(function() {
