@@ -8,6 +8,10 @@ App.score = 0;
 
 App.currentPi = '';
 
+App.challengeMode = false;
+
+App.life = 3;
+
 App.getPi = function() {
   $.ajax({
     url: '/pi-answer',
@@ -34,6 +38,13 @@ App.verifyPi = function(entry) {
     correct = true;
     console.log('Correct Entry');
   } else {
+    var that = this;
+
+    // Deduct life
+    if (this.challengeMode) {
+      this.life--; 
+      $('.js-life').text(that.life);
+    }
     this.count--;
     console.log('Wrong entry');
   }
@@ -66,11 +77,15 @@ App.keyListener = function() {
   var value = '';
 
   $(".grid").on('click', function() {
+    if (isNaN($(this).text())) return;
+
     value = $(this).text();
 
     if (App.verifyPi(value)) {
       App.updatePiIndicator();
       App.updateScoreIndicator();
+    } else {
+      App.checkGameOver();
     }
   });
 
@@ -83,7 +98,24 @@ App.keyListener = function() {
       App.updatePiIndicator();
       App.updateScore();
       App.updateScoreIndicator();
+    } else {
+      App.checkGameOver();
     }
+  });
+
+  $('.js-challenge').click(function() {
+    if (!App.challengeMode) {
+      App.reset();
+      App.challengeMode = true;
+      $('.life-container').fadeIn();
+    } else {
+      App.reset();
+      App.challengeMode = false;
+    }
+  });
+
+  $('.js-reset-game').click(function() {
+    App.reset();
   });
 };
 
@@ -108,6 +140,27 @@ App.swapKeyLayoutListener = function() {
       changed = false;
     }
   });
+};
+
+App.checkGameOver = function() {
+  if (this.life === 0) App.showDeathScreen();
+};
+
+App.showDeathScreen = function() {
+  $('.death-screen').fadeIn();
+};
+
+App.reset = function() {
+  this.count = -1;
+  this.score = 0;
+  this.currentPi = '';
+  this.challengeMode = false;
+  this.life = 3;
+  $('.death-screen').hide();
+  $('.js-life').text(this.life);
+  $('.life-container').hide();
+  $('.js-score-indicator').text(this.score);
+  $('.js-pi-indicator').text(this.currentPi);
 };
 
 App.main = function() {

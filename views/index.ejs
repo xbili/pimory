@@ -10,16 +10,30 @@
   <body>
   <div class="container">
 
-  <!-- PI & Score indicator -->
-  <div class="pi-score-container">
+  <!-- Indicators -->
+  <div class="indicator-container">
+    <!-- Life indicator -->
+    <div class="life-container">
+      <h1>Life:</h1>
+      <h3 class="js-life">3</h3>
+    </div>
+    <!-- *end* -->
+
+    <!-- Score indicator -->
     <h1>Score:</h1>
     <h3 class="js-score-indicator">0</h3>
+    <!-- *end* -->
+
+    <!-- Pi indicator -->
     <div class="pi-container js-pi-container">
       <h1>3.</h1>
       <h3 class="js-pi-indicator"></h3>
     </div>
+    <!-- *end* -->
   </div>
   <!-- *end* -->
+
+  
 
   <!-- Grid for PI keyboard -->
   <div class="grid-container">
@@ -41,13 +55,21 @@
     <div class="grid-row row">
       <div class="grid js-swap-layout col-xs-3"><p>Change Layout</p></div>
       <div class="grid col-xs-3"><h1>0</h1></div>
-      <div class="grid col-xs-3"><p>Challenge Mode</p></div>
+      <div class="grid js-challenge col-xs-3"><p>Challenge Mode</p></div>
     </div>
   </div>
   <!-- *end* -->
 
 
   </div>
+
+  <!-- Death Screen -->
+  <div class="container death-screen js-death-screen">
+    <h1>GAME OVER.</h1>
+    <button class="js-reset-game btn btn-default">Play Again?</button>
+  </div>
+  <!-- *end* -->
+
   <script type="text/javascript" src="javascripts/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="javascripts/main.js"></script>
   </body>
