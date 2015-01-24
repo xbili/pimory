@@ -43,6 +43,8 @@ App.verifyPi = function(entry) {
 
 App.updatePiIndicator = function() {
   $(".js-pi-indicator").html(this.currentPi);
+  // Scrolls the container to the bottom when it overflows
+  $(".js-pi-container").animate({ scrollTop: $(".js-pi-container")[0].scrollHeight}, 1000);
 };
 
 App.updateScore = function() {

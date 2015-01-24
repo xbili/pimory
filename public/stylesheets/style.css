@@ -37,7 +37,7 @@ a {
   }
 
 .pi-container {
-  overflow: scroll;
+  overflow: auto;
   height: 360.75px;
 }
 
