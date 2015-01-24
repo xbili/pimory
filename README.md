@@ -7,6 +7,8 @@ Aids people in memorizing Pi (currently up till 9999 digits). Because everybody 
 
 Web-app written for HacknRoll 2015.
 
+Currently hosted on [Heroku].
+
 Getting Started:
 ----------------
 
@@ -18,3 +20,4 @@ Getting Started:
 Enjoy! :D
 
 [Pimorize]: https://play.google.com/store/apps/details?id=com.mampersat.pimorize&hl=en
+[Heroku]: http://pimory.herokuapp.com/
