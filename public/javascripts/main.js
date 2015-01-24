@@ -59,13 +59,7 @@ App.updatePiIndicator = function() {
 };
 
 App.updateScore = function() {
-  if (this.count < 15) {
-    this.score += 10;
-  } else if (this.count < 50) {
-    this.score += 25;
-  } else if (this.count < 150) {
-    this.score += 50;
-  }
+  this.score++;
 };
 
 App.updateScoreIndicator = function() {
