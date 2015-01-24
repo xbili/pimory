@@ -93,7 +93,6 @@ App.keyListener = function() {
 
     if (App.verifyPi(value)) {
       App.updatePiIndicator();
-      App.updateScore();
       App.updateScoreIndicator();
     } else {
       App.checkGameOver();
