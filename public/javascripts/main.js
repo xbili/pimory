@@ -40,6 +40,9 @@ App.verifyPi = function(entry) {
   } else {
     var that = this;
 
+    // Shakes the keypad, for lulz
+    $('.grid-container').effect('shake', {times: 2}, 250);
+
     // Deduct life
     if (this.challengeMode) {
       this.life--; 
@@ -141,7 +144,7 @@ App.checkGameOver = function() {
 };
 
 App.showDeathScreen = function() {
-  $('.death-screen').fadeIn();
+  $('.death-screen').fadeIn(2000);
 };
 
 App.reset = function() {
